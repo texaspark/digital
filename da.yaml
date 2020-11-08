@@ -30,6 +30,6 @@ spec:
     - port: 80
       protocol: TCP
       targetPort: 80   # Application Container port ### (9090)
-  type: LoadBalancer
+  type: LoadBalancer # OCI loadbalacer auto creation
 
 
