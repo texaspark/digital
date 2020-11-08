@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: da-deployment
@@ -19,7 +19,7 @@ spec:
             - containerPort: 80 #Endpoint is at port 80 in the container
 
 ---
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Service
 metadata:
   name: da-service
