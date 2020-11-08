@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: daweb
-          image: inc.ocir.io/id03wiznwkrx/seokwon/daweb:latest  #Seoul Region OCIR
+          image: icn.ocir.io/id03wiznwkrx/seokwon/daweb:latest  #Seoul Region OCIR
           ports:
             - containerPort: 80 #Endpoint is at port 80 in the container
 
