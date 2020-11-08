@@ -1,0 +1,40 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: da-deployment
+spec:
+  selector:
+    matchLabels:
+      app: da
+  replicas: 3 # deployment runs 1 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: da
+    spec:
+      containers:
+        - name: daweb
+          image: inc.ocir.io/id03wiznwkrx/seokwon/daweb:latest  #Seoul Region OCIR
+          ports:
+            - containerPort: 80 #Endpoint is at port 80 in the container
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: da-service
+spec:
+  selector:
+    app: da
+  type: NodePort #Exposes the service as a node port
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80   # Application Container port ### (9090)
+      nodePort: 30007
+
+ #type: ClusterIP
+ #type: LoadBalancer
+ #loadBalancerIP: 129.213.171.70 (OCI lB)
+
+
