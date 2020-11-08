@@ -30,10 +30,6 @@ spec:
     - port: 80
       protocol: TCP
       targetPort: 80   # Application Container port ### (9090)
- #type: NodePort #Exposes the service as a node port
- #    nodePort: 30007
- type: ClusterIP
- #type: LoadBalancer
- #loadBalancerIP: 129.213.171.70 (OCI lB)
+
 
 
