@@ -32,5 +32,3 @@ spec:
       targetPort: 80   # Application Container port ### (9090)
   type: LoadBalancer # OCI loadbalacer auto creation, Most simplest way.
 
-
-
