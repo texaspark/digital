@@ -27,8 +27,8 @@ spec:
   selector:
     app: da
   ports:
-    - port: 80
+    - port: 80 # Cluster IP port (= service Port)
       protocol: TCP
-      targetPort: 80   # Application Container port ### (9090)
+      targetPort: 80   # # pods localhost port
   type: LoadBalancer # OCI loadbalacer auto creation, Most simplest way.
 
